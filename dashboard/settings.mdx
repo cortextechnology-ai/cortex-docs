@@ -1,0 +1,61 @@
+---
+title: "Settings"
+description: "Business profile, operational status, Manager PIN, and agent configuration."
+icon: "settings"
+---
+
+The **Settings** page holds everything about your restaurant and how the agent
+behaves. The sections, top to bottom:
+
+## Business Profile
+
+Your restaurant's name, owner email, address, and timezone. Your **phone
+number is shown read-only** here — numbers and porting are managed by the
+Cortex team (you'll see "pending setup" until yours is provisioned).
+
+## Operational Status
+
+A manual override on top of your scheduled hours:
+
+| Status | Effect |
+| --- | --- |
+| **Open** | Normal operation — agent answers and takes orders. |
+| **Busy** | Agent answers but manages expectations on wait times. |
+| **Closed** | Agent answers but won't take orders. |
+| **Emergency** | Everything stops. Set from [In-Store Mode](/dashboard/in-store-mode); cleared from the red banner with the Manager PIN. |
+
+You can attach a **custom message** for the AI to relay to callers while a
+status is active. Operational status temporarily overrides your scheduled
+[business hours](/voice-core/store-hours).
+
+## AI Agent Voice & Personality
+
+The agent's greeting and personality notes — covered in detail in
+[Voice Configuration](/voice-core/voice-configuration).
+
+## Manager PIN
+
+A numeric PIN (6 digits by default) required for sensitive in-store controls:
+pause, transfer, and emergency stop. Only **owners and admins** can set or
+update it.
+
+<Warning>
+  Set the Manager PIN before your first service — without it, staff can't
+  pause the agent or clear an emergency from the floor.
+</Warning>
+
+## Business Hours, Special Dates, and Order Rules
+
+Weekly hours (split shifts and overnight supported), holiday closures, and the
+rules for when orders are accepted (buffer before close, pre-open and
+after-close ordering). All covered in [Store Hours](/voice-core/store-hours).
+
+## After-Hours Behavior
+
+The AI answers calls 24/7. Outside your hours it tells callers you're closed —
+optionally with a **custom after-hours message** you set here.
+
+## Support
+
+A preview of your recent support tickets, with shortcuts to create or view
+them. See [Support](/dashboard/support).

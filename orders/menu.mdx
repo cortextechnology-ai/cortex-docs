@@ -1,33 +1,51 @@
 ---
 title: "Menu Management"
-description: "Manage your menu for order taking."
+description: "Build your menu and deploy it to the voice agent."
 icon: "book-open"
 ---
 
 Your menu is what Cortex uses to take accurate orders. A clean, well-structured
-menu means fewer mistakes and faster calls.
+menu means fewer mistakes and faster calls. Manage it in the dashboard under
+**Menu & FAQ → Menu**.
+
+## Adding items
+
+Hit **Add Item** to create a menu item. Each item has:
+
+- **Name** — use the name your customers actually say.
+- **Description** and **Ingredients** — help the agent answer "what's in it?"
+- **Customization Notes** — how the item can be modified or special-cased.
+- **Price** and **Category** — items are grouped by category (pick an existing
+  one or create a new one inline).
+- **Modifiers** — choices and add-ons, each with its own price (size,
+  toppings, "no onions").
+- **Available** toggle — flip it off to 86 an item without deleting it.
+
+## Deploy to Voice Agent
+
+<Warning>
+  Menu edits don't reach the live agent until you press **Deploy to Voice
+  Agent**. After any batch of changes, deploy — then place a test call.
+</Warning>
+
+The deploy syncs your items, prices, and modifiers to the agent so it takes
+orders against the current menu.
 
 ## Where your menu comes from
 
 <Columns cols={2}>
-  <Card title="From your POS" icon="plug" href="/orders/pos">
-    If you connect a supported POS, your menu syncs automatically — items,
-    prices, and modifiers stay in sync.
+  <Card title="Built in the dashboard" icon="pencil">
+    Enter items, prices, and modifiers directly — works with any kitchen, no
+    POS required.
   </Card>
-  <Card title="Manual menu" icon="pencil">
-    No POS? Enter items, prices, and modifiers directly in the dashboard.
+  <Card title="From your POS" icon="plug" href="/orders/pos">
+    If we connect a supported POS, your menu can sync from it during setup.
   </Card>
 </Columns>
 
-## Structuring items
-
-- **Items** — the things people order (e.g. "Margherita Pizza").
-- **Modifiers** — choices and add-ons (e.g. size, toppings, "no onions").
-- **Prices** — base price plus any modifier pricing.
-
 <Tip>
   Use the names your customers actually say. If everyone calls it "the works,"
-  add that as an alias so Cortex recognizes it.
+  put that in the item name or customization notes so Cortex recognizes it.
 </Tip>
 
 <Warning>

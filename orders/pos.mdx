@@ -4,40 +4,48 @@ description: "Connect Cortex to your POS for automatic order processing."
 icon: "plug"
 ---
 
-Connecting your POS lets Cortex sync your menu and push orders in
-automatically — no re-keying, no separate tablet to watch.
+Connecting your POS lets Cortex push orders in automatically — no re-keying,
+no separate tablet to watch.
 
 ## Choosing an integration path
 
 <Columns cols={2}>
   <Card title="Direct POS integration" icon="plug">
-    Orders flow straight into your POS and onto the kitchen line. Menu syncs
-    automatically.
+    Orders flow straight into your POS and onto the kitchen line.
   </Card>
-  <Card title="Manual setup (no POS)" icon="pencil" href="/orders/menu">
-    Cortex sends each order to you directly. Best if your POS isn't supported
-    yet.
+  <Card title="Dashboard only (no POS)" icon="monitor">
+    Orders appear live in the [dashboard](/dashboard/orders) and the
+    [In-Store console](/dashboard/in-store-mode). Best if your POS isn't
+    supported yet.
   </Card>
 </Columns>
 
 ## Supported systems
 
-Cortex integrates with major restaurant POS platforms. Support and setup steps
-vary by provider — tell us what you run during onboarding and we'll confirm the
-path and handle the connection.
+Cortex currently integrates with **Clover**, **Toast**, and **Square**. The
+connection is set up by the Cortex team during onboarding — tell us what you
+run and we'll handle it.
 
 <Info>
   Don't see your POS, or not sure? Reach out at
-  [support@cor-tex.solutions](mailto:support@cor-tex.solutions). We're adding
-  integrations continuously, and manual setup works with any kitchen in the
-  meantime.
+  [cortextechnologyai@gmail.com](mailto:cortextechnologyai@gmail.com). We're
+  adding integrations continuously, and the dashboard flow works with any
+  kitchen in the meantime.
 </Info>
+
+## How POS orders behave
+
+Orders that flow through your POS are marked with a **POS source** in the
+dashboard, and their status is **controlled by the POS** — you'll see them in
+the [Orders page](/dashboard/orders) for visibility, but the kitchen lifecycle
+lives in your POS.
 
 ## After connecting
 
 <Steps>
-  <Step title="Verify the menu synced">
-    Check that items, prices, and modifiers match your POS.
+  <Step title="Verify the menu">
+    Check that items, prices, and modifiers in [Menu & FAQ](/orders/menu)
+    match your POS, then **Deploy to Voice Agent**.
   </Step>
   <Step title="Place a test order">
     Confirm it appears in your POS with the correct details.

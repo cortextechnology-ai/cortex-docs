@@ -1,0 +1,51 @@
+---
+title: "Calls"
+description: "Call history, transcripts, and recordings for every call the AI answers."
+icon: "phone"
+---
+
+The **Calls** page is the full history of your phone line: every answered,
+missed, and abandoned call, with transcripts and recordings.
+
+## The calls list
+
+Stat cards up top show **Total Calls**, **Answered**, **Missed**, **With
+Orders**, and **Total Minutes**. Below, the table lists each call's phone
+number, result (Completed, Missed, Abandoned, Voicemail — live calls pulse),
+duration, summary, linked order, and time.
+
+- **Search** by phone number, summary, or transcript text.
+- **Filter** by result, whether an order was placed, and date range.
+- **Export CSV** downloads the filtered list (date, phone, result, duration,
+  order ID, summary).
+
+## Call detail
+
+Click any call to open it. Four tabs:
+
+<Columns cols={2}>
+  <Card title="Summary" icon="file-text">
+    Phone, duration, call time, and the AI's confidence score, plus a written
+    summary and a link to the order if one was placed.
+  </Card>
+  <Card title="Transcript" icon="message-square-text">
+    The full conversation, line by line, labeled AI and Caller.
+  </Card>
+  <Card title="Recording" icon="volume-2">
+    The original call audio with a player, **Share Link**, and **Download
+    Recording**.
+  </Card>
+  <Card title="Order details" icon="receipt">
+    The linked order, or a note that no order was placed.
+  </Card>
+</Columns>
+
+<Info>
+  Recordings are stored for **90 days**.
+</Info>
+
+## Correcting a call's outcome
+
+On the Summary tab you can edit the **call disposition** — change the result
+and, for failed calls, record a failure reason (No Answer, Customer Hung Up,
+Technical Issue, Wrong Number, Other). This keeps your analytics honest.

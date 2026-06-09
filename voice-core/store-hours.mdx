@@ -1,36 +1,57 @@
 ---
 title: "Store Hours"
-description: "Set your operating hours and special schedules."
+description: "Business hours, holiday exceptions, order rules, and after-hours behavior."
 icon: "clock"
 ---
 
-Cortex uses your hours to answer "are you open?", to set expectations on pickup
-times, and to gate ordering when you're closed. Keep them accurate.
+Cortex uses your hours to answer "are you open?", to set expectations on
+pickup times, and to gate ordering when you're closed. Keep them accurate.
+Everything below lives in **Settings**.
 
-## Setting regular hours
+## Business Hours
 
-In the dashboard under **Store Hours**, set open and close times for each day of
-the week. You can add multiple windows per day for split shifts (e.g. lunch and
-dinner with an afternoon break).
+Set open and close times for each day of the week. Multiple windows per day
+are supported for split shifts (lunch and dinner with an afternoon break), and
+overnight hours work too (e.g. open until 2 AM).
 
-## Special schedules
+## Special Dates & Exceptions
 
 <Columns cols={2}>
   <Card title="Holidays" icon="calendar-off">
-    Mark closures so Cortex tells callers you're closed instead of taking orders
-    you can't fill.
+    Mark closures so Cortex tells callers you're closed instead of taking
+    orders you can't fill.
   </Card>
   <Card title="Special hours" icon="calendar-clock">
     One-off early closes or late opens (events, private parties, weather).
   </Card>
 </Columns>
 
+## Order Rules
+
+Control when the agent accepts orders relative to your hours:
+
+- **Buffer Duration** — stop taking orders a set number of minutes before each
+  closing time (0–60 minutes, default 15), so the kitchen isn't slammed at
+  close.
+- **Allow orders before opening** — let early callers place orders for when
+  you open.
+- **Allow orders after closing** — keep taking orders briefly past close.
+
+A live **Current Order Acceptance** summary shows exactly what your rules add
+up to right now.
+
+## After-hours behavior
+
+The AI answers **24/7** — outside your hours it tells callers you're closed
+and when you reopen. You can add a custom after-hours message in Settings.
+
+## Manual override
+
+Need to close early or slow things down right now? Set the
+[Operational Status](/dashboard/settings) (Open / Busy / Closed / Emergency) —
+it temporarily overrides your scheduled hours.
+
 <Warning>
-  If ordering is enabled, Cortex will not take orders outside your open hours.
+  Cortex will not take orders outside your open hours (plus your order rules).
   Double-check holiday closures before long weekends.
 </Warning>
-
-<Tip>
-  Update special hours as soon as you know them. A wrong "we're open" is worse
-  than no answer at all.
-</Tip>

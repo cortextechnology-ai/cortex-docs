@@ -1,0 +1,46 @@
+---
+title: "Orders"
+description: "Every order the AI takes, with status tracking and full call context."
+icon: "receipt"
+---
+
+The **Orders** page lists every order your agent has taken, with filters,
+status management, and a drill-down into the call behind each order.
+
+## The orders table
+
+Each row shows the **customer** (name and phone), **items**, **total**,
+**status**, **payment state**, and **time**. Filter by status (Pending,
+Confirmed, Preparing, Ready, Completed, Cancelled), payment (Pending, Paid,
+Failed, Refunded), or date range.
+
+Click a status to advance it through the kitchen flow: Confirmed → Preparing →
+Ready → Completed.
+
+<Info>
+  Orders that came in through your POS show **"Status controlled by POS"** —
+  their lifecycle is managed on the POS side. See
+  [POS Integration](/orders/pos).
+</Info>
+
+## Order detail
+
+Expand any order to see everything about it:
+
+- **Customer** — returning customer or first-time caller.
+- **Items ordered** — with modifiers and per-item pricing.
+- **Order timeline** — every status change, timestamped.
+- **Pricing** — subtotal, tax & fees, total, payment method and status.
+- **Call summary and link** — the call behind the order, with **View Call
+  Transcript** and **Listen to Recording** shortcuts.
+
+## Needs Review
+
+Orders from low-confidence calls are badged **"Needs Review"** — give those a
+quick check before firing the ticket. They also surface as alerts in
+[In-Store Mode](/dashboard/in-store-mode).
+
+## Something wrong with an order?
+
+Use **Report Issue** on the order to open a support ticket with the order and
+call context already attached. See [Support](/dashboard/support).

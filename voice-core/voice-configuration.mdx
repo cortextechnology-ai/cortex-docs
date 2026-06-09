@@ -1,39 +1,47 @@
 ---
 title: "Voice Configuration"
-description: "Customize your AI voice personality and greeting."
+description: "Customize your AI agent's greeting and personality."
 icon: "waveform"
 ---
 
-Your agent's voice is the first thing every caller hears. Configure it in the
-dashboard under **Voice Configuration**.
+Your agent's first line is the first thing every caller hears. Configure it in
+the dashboard under **Settings → AI Agent Voice & Personality**.
 
-## What you can set
+## Custom greeting
 
-<Columns cols={2}>
-  <Card title="Voice" icon="waveform">
-    Choose from a library of natural, low-latency voices. Pick one that matches
-    your restaurant's vibe.
-  </Card>
-  <Card title="Greeting" icon="hand">
-    The first line callers hear, e.g. *"Thanks for calling Mario's — how can I
-    help?"*
-  </Card>
-  <Card title="Personality" icon="sparkles">
-    Tone and style: warm and casual, brisk and efficient, or anything in
-    between.
-  </Card>
-  <Card title="Language" icon="languages">
-    Set the primary language your agent speaks.
-  </Card>
-</Columns>
+The opening line of every call. If you leave it blank, the agent uses its
+default: *"Hey there — thanks for calling [your restaurant]."*
 
-## Tips for a good greeting
+- Up to **500 characters** — but one short sentence is best.
+- The recording notice and the "can I grab a name?" ask are **added
+  automatically** — don't write them into your greeting.
+- A **Reset to default** link restores the standard greeting anytime.
+
+### Tips for a good greeting
 
 - **Lead with your name.** Callers want to know they reached the right place.
-- **Keep it short.** One sentence. Long greetings get talked over.
+- **Keep it short.** Long greetings get talked over.
 - **Set expectations.** *"...I can take your order or answer a quick question."*
 
+## Personality notes
+
+An advanced, optional field (up to **4,000 characters**) that guides the
+agent's **tone and word choice** — for example:
+
+> Be extra upbeat and friendly. Mention our daily special if asked what's good.
+
+<Info>
+  Personality notes shape *how* the agent talks, not *what* it does. They
+  can't change how orders are taken, the menu, or the agent's identity — menu
+  and policy live in [Menu & FAQ](/orders/menu) and [FAQs](/voice-core/faqs).
+</Info>
+
+## Saving and testing
+
+Hit **Save Agent Settings**, then place a test call. The greeting is the
+easiest thing to get subtly wrong — and the easiest to fix.
+
 <Tip>
-  After any change, place a test call. The greeting and voice are the easiest
-  things to get subtly wrong, and the easiest to fix.
+  After any change, call your own number. Thirty seconds of listening beats
+  ten minutes of rereading the text box.
 </Tip>

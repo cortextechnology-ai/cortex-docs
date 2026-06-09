@@ -1,0 +1,52 @@
+---
+title: "In-Store Mode"
+description: "A live operations console for the counter — calls, orders, and controls."
+icon: "monitor-play"
+---
+
+In-Store Mode turns the dashboard into a full-screen ops console built for
+service hours. Open it with **Enter In-Store Mode** in the sidebar.
+
+## The console
+
+<Columns cols={2}>
+  <Card title="Live call panel" icon="phone-call">
+    Active calls in real time: caller phone and name, what they're doing
+    (Ordering, Question, Complaint), the call stage (Greeting → Gathering items
+    → Confirming → Payment → Completed), and a live transcript.
+  </Card>
+  <Card title="Today's orders" icon="receipt">
+    The day's order queue. Advance statuses (Pending → Confirmed → In Progress
+    → Ready → Completed), add notes, and copy the customer's phone.
+  </Card>
+  <Card title="Exceptions & alerts" icon="triangle-alert">
+    Flags anything that needs a human: low-confidence calls, missed or
+    abandoned calls, and pending online payments — with severity levels and a
+    jump to the related call or order.
+  </Card>
+  <Card title="Top bar controls" icon="sliders-horizontal">
+    System status, live call count, and the agent controls described below.
+  </Card>
+</Columns>
+
+## Controlling the agent live
+
+The top bar gives you direct control over the AI during service:
+
+- **Pause AI / Resume AI** — temporarily stop the agent from taking new calls.
+- **Transfer** — hand the next call (or a specific live call) to your staff.
+- **Emergency Stop** — immediately stop the agent and end active calls. A red
+  **EMERGENCY MODE ACTIVE** banner stays up until you clear it.
+- **Flag Call** — mark a live call with a note for follow-up.
+
+<Warning>
+  Sensitive controls — pause, transfer, and emergency stop — require the
+  **Manager PIN** set in [Settings](/dashboard/settings). Set the PIN before
+  your first service.
+</Warning>
+
+## Keyboard shortcuts
+
+The order queue is keyboard-first: **↑/↓** navigate, **Enter** expands an
+order, **C / I / R / D** set status (Confirmed / In Progress / Ready / Done),
+and **N** adds a note.

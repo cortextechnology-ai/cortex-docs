@@ -2,11 +2,11 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
   "name": "Cortex Docs",
-  "description": "Voice AI for restaurants — Cortex answers calls, takes orders, and manages bookings 24/7.",
+  "description": "Voice AI for restaurants — Cortex answers calls, takes orders, and syncs with your POS 24/7.",
   "colors": {
-    "primary": "#2563EB",
-    "light": "#60A5FA",
-    "dark": "#1D4ED8"
+    "primary": "#E52E2E",
+    "light": "#FF6B6B",
+    "dark": "#C21818"
   },
   "logo": {
     "light": "/logo/light.svg",
@@ -15,10 +15,18 @@
   },
   "favicon": "/favicon.svg",
   "appearance": {
-    "default": "system"
+    "default": "light"
+  },
+  "background": {
+    "color": {
+      "light": "#FAF4EA",
+      "dark": "#15110D"
+    }
   },
   "fonts": {
-    "family": "Inter"
+    "family": "Cabinet Grotesk",
+    "source": "/fonts/CabinetGrotesk-Variable.woff2",
+    "format": "woff2"
   },
   "icons": {
     "library": "lucide"
@@ -31,6 +39,19 @@
           {
             "group": "Getting Started",
             "pages": ["introduction", "quickstart", "going-live"]
+          },
+          {
+            "group": "Dashboard",
+            "pages": [
+              "dashboard/getting-access",
+              "dashboard/overview",
+              "dashboard/in-store-mode",
+              "dashboard/orders",
+              "dashboard/calls",
+              "dashboard/analytics",
+              "dashboard/settings",
+              "dashboard/support"
+            ]
           },
           {
             "group": "Voice Core",
@@ -61,7 +82,7 @@
         },
         {
           "anchor": "Support",
-          "href": "mailto:support@cor-tex.solutions",
+          "href": "mailto:cortextechnologyai@gmail.com",
           "icon": "headset"
         }
       ]
@@ -70,7 +91,7 @@
   "navbar": {
     "links": [
       {
-        "label": "Contact Sales",
+        "label": "Get a demo",
         "href": "https://cor-tex.solutions"
       }
     ],
@@ -85,8 +106,8 @@
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/cortexsolutions",
-      "linkedin": "https://linkedin.com/company/cortex-solutions"
+      "website": "https://cor-tex.solutions",
+      "linkedin": "https://www.linkedin.com/in/hamoodey/"
     }
   },
   "seo": {

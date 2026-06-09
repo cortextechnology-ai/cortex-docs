@@ -1,6 +1,6 @@
 ---
 title: "Going Live"
-description: "Test your agent, then switch on call forwarding to launch Cortex."
+description: "Test your agent, then activate AI ordering to launch Cortex."
 icon: "circle-play"
 ---
 
@@ -10,39 +10,50 @@ Before you point real customers at Cortex, run through this checklist.
 
 <Steps>
   <Step title="Place a test call">
-    Call your Cortex number and run a normal order or question. Confirm the
-    greeting, voice, and answers sound right.
+    The onboarding wizard's **Test the Agent** step shows your restaurant's
+    number and detects your first call automatically. Run a normal order or
+    question and confirm the greeting, voice, and answers sound right.
   </Step>
   <Step title="Verify your hours">
-    Make sure [store hours](/voice-core/store-hours) and any holiday closures
-    are correct — Cortex uses them to answer "are you open?" and to gate
-    ordering.
+    Make sure [store hours](/voice-core/store-hours), holiday closures, and
+    **order rules** are correct — Cortex uses them to answer "are you open?"
+    and to gate ordering.
   </Step>
   <Step title="Spot-check the menu">
-    If ordering is on, order a few items and confirm they land in your POS with
-    the right modifiers and price.
+    Order a few items and confirm they come through with the right modifiers
+    and prices. Remember: menu edits only reach the agent after
+    [**Deploy to Voice Agent**](/orders/menu).
   </Step>
   <Step title="Review FAQs">
     Confirm the [FAQs](/voice-core/faqs) cover your most common questions:
-    location, parking, allergens, delivery radius.
+    location, parking, allergens, delivery.
+  </Step>
+  <Step title="Set the Manager PIN">
+    Staff need it for pause, transfer, and emergency stop during service. Set
+    it in [Settings](/dashboard/settings).
   </Step>
 </Steps>
 
-## Switch on call forwarding
+## Activate AI ordering
 
-When everything checks out, forward your restaurant line to your Cortex number.
+When everything checks out, finish the wizard's **Go Live** step — **Activate
+AI Ordering** opens your restaurant and the agent starts taking orders.
+
+If you're keeping an existing number and forwarding it to Cortex, switch
+forwarding on at your carrier now.
 
 <Info>
-  The exact forwarding steps depend on your phone carrier. Most carriers use a
-  star code like `*72<number>` to enable and `*73` to disable. Check your
-  carrier or ask us at [support@cor-tex.solutions](mailto:support@cor-tex.solutions).
+  The exact forwarding steps depend on your carrier. Most use a star code like
+  `*72<number>` to enable and `*73` to disable. Not sure? Ask us at
+  [cortextechnologyai@gmail.com](mailto:cortextechnologyai@gmail.com).
 </Info>
 
 <Check>
-  You're live. Cortex now answers every forwarded call, 24/7.
+  You're live. Cortex now answers every call, 24/7.
 </Check>
 
 ## Turning Cortex off
 
-You stay in control. Disable call forwarding at your carrier, or toggle the
-agent off in the dashboard, any time.
+You stay in control. Set your [Operational Status](/dashboard/settings) to
+**Closed**, pause the agent from [In-Store Mode](/dashboard/in-store-mode), or
+disable call forwarding at your carrier — any time.
