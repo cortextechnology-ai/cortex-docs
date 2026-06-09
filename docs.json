@@ -77,13 +77,11 @@
       "anchors": [
         {
           "anchor": "Dashboard",
-          "href": "https://app.cor-tex.solutions",
-          "icon": "grid"
+          "href": "https://app.cor-tex.solutions"
         },
         {
           "anchor": "Support",
-          "href": "mailto:cortextechnologyai@gmail.com",
-          "icon": "headset"
+          "href": "mailto:cortextechnologyai@gmail.com"
         }
       ]
     }
@@ -102,7 +100,7 @@
     }
   },
   "contextual": {
-    "options": ["copy", "view", "assistant", "chatgpt", "claude", "mcp"]
+    "options": ["copy", "view", "chatgpt", "claude", "mcp"]
   },
   "footer": {
     "socials": {
