@@ -116,31 +116,11 @@
   color: #faf4ea;
 }
 
-/* sidebar anchors (Dashboard / Support): text only, no icon chip */
-.nav-anchor > div:first-child {
-  display: none;
-}
-
-.nav-anchor {
-  margin-left: 0;
-}
-
-/* ---- assistant disabled: hide every entry point ---- */
-
-#assistant-entry,
-#assistant-entry-mobile,
-button[aria-label="Toggle assistant panel"],
-#chat-assistant-textarea,
-.chat-assistant-floating-input,
-[class*="chat-assistant"],
-[id^="chat-assistant"] {
-  display: none !important;
-}
-
-/* ---- search → dark glass field ---- */
+/* ---- search + assistant → dark glass fields ---- */
 
 #navbar #search-bar-entry,
-#navbar button[id^="search-bar"] {
+#navbar button[id^="search-bar"],
+#navbar #assistant-entry {
   background: rgba(255, 255, 255, 0.07) !important;
   border-radius: 999px;
   box-shadow: none;
@@ -148,7 +128,8 @@ button[aria-label="Toggle assistant panel"],
   color: rgba(250, 244, 234, 0.65);
 }
 
-#navbar #search-bar-entry * {
+#navbar #search-bar-entry *,
+#navbar #assistant-entry * {
   color: rgba(250, 244, 234, 0.65) !important;
 }
 

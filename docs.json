@@ -71,17 +71,28 @@
             "pages": ["faq"]
           }
         ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "API Reference",
+            "pages": ["api-reference/coming-soon"]
+          }
+        ]
       }
     ],
     "global": {
       "anchors": [
         {
           "anchor": "Dashboard",
-          "href": "https://app.cor-tex.solutions"
+          "href": "https://app.cor-tex.solutions",
+          "icon": "layout-grid"
         },
         {
           "anchor": "Support",
-          "href": "mailto:cortextechnologyai@gmail.com"
+          "href": "mailto:cortextechnologyai@gmail.com",
+          "icon": "headset"
         }
       ]
     }
@@ -100,7 +111,7 @@
     }
   },
   "contextual": {
-    "options": ["copy", "view", "chatgpt", "claude", "mcp"]
+    "options": ["copy", "view", "assistant", "chatgpt", "claude", "mcp"]
   },
   "footer": {
     "socials": {
