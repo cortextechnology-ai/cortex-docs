@@ -129,7 +129,11 @@
 
 #assistant-entry,
 #assistant-entry-mobile,
-button[aria-label="Toggle assistant panel"] {
+button[aria-label="Toggle assistant panel"],
+#chat-assistant-textarea,
+.chat-assistant-floating-input,
+[class*="chat-assistant"],
+[id^="chat-assistant"] {
   display: none !important;
 }
 
