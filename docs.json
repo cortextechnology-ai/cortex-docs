@@ -1,0 +1,97 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Cortex Docs",
+  "description": "Voice AI for restaurants — Cortex answers calls, takes orders, and manages bookings 24/7.",
+  "colors": {
+    "primary": "#2563EB",
+    "light": "#60A5FA",
+    "dark": "#1D4ED8"
+  },
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg",
+    "href": "https://cor-tex.solutions"
+  },
+  "favicon": "/favicon.svg",
+  "appearance": {
+    "default": "system"
+  },
+  "fonts": {
+    "family": "Inter"
+  },
+  "icons": {
+    "library": "lucide"
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": ["introduction", "quickstart", "going-live"]
+          },
+          {
+            "group": "Voice Core",
+            "pages": [
+              "voice-core/overview",
+              "voice-core/voice-configuration",
+              "voice-core/store-hours",
+              "voice-core/faqs"
+            ]
+          },
+          {
+            "group": "Orders",
+            "pages": ["orders/overview", "orders/menu", "orders/pos"]
+          },
+          {
+            "group": "Help",
+            "pages": ["faq"]
+          }
+        ]
+      }
+    ],
+    "global": {
+      "anchors": [
+        {
+          "anchor": "Dashboard",
+          "href": "https://app.cor-tex.solutions",
+          "icon": "grid"
+        },
+        {
+          "anchor": "Support",
+          "href": "mailto:support@cor-tex.solutions",
+          "icon": "headset"
+        }
+      ]
+    }
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Contact Sales",
+        "href": "https://cor-tex.solutions"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Dashboard",
+      "href": "https://app.cor-tex.solutions"
+    }
+  },
+  "contextual": {
+    "options": ["copy", "view", "assistant", "chatgpt", "claude", "mcp"]
+  },
+  "footer": {
+    "socials": {
+      "x": "https://x.com/cortexsolutions",
+      "linkedin": "https://linkedin.com/company/cortex-solutions"
+    }
+  },
+  "seo": {
+    "metatags": {
+      "canonical": "https://docs.cor-tex.solutions"
+    }
+  }
+}

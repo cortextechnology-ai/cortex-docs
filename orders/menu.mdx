@@ -1,0 +1,36 @@
+---
+title: "Menu Management"
+description: "Manage your menu for order taking."
+icon: "book-open"
+---
+
+Your menu is what Cortex uses to take accurate orders. A clean, well-structured
+menu means fewer mistakes and faster calls.
+
+## Where your menu comes from
+
+<Columns cols={2}>
+  <Card title="From your POS" icon="plug" href="/orders/pos">
+    If you connect a supported POS, your menu syncs automatically — items,
+    prices, and modifiers stay in sync.
+  </Card>
+  <Card title="Manual menu" icon="pencil">
+    No POS? Enter items, prices, and modifiers directly in the dashboard.
+  </Card>
+</Columns>
+
+## Structuring items
+
+- **Items** — the things people order (e.g. "Margherita Pizza").
+- **Modifiers** — choices and add-ons (e.g. size, toppings, "no onions").
+- **Prices** — base price plus any modifier pricing.
+
+<Tip>
+  Use the names your customers actually say. If everyone calls it "the works,"
+  add that as an alias so Cortex recognizes it.
+</Tip>
+
+<Warning>
+  Keep prices current. Cortex reads back the total on every order — a stale
+  price is a stale total.
+</Warning>
