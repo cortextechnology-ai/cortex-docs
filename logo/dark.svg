@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2350 750">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2310 750">
 <g transform="translate(0.000000,750.000000) scale(0.100000,-0.100000)"
-fill="#FAF4EA" stroke="none">
+fill="#E52E2E" stroke="none">
 <path d="M3365 7300 c-22 -4 -79 -14 -126 -23 -239 -44 -457 -47 -611 -7 -100
 26 -152 22 -210 -13 -37 -22 -194 -185 -237 -245 -16 -24 -28 -31 -40 -26 -56
 23 -91 26 -145 10 -73 -21 -128 -71 -157 -141 l-22 -54 -161 1 c-183 2 -242
@@ -263,9 +263,9 @@ l-82 -41 -53 15 c-28 8 -65 14 -82 12 -28 -2 -32 3 -87 108 -61 117 -112 259
 -71 -119 7 -219 34 -338 92 l-92 46 92 33 c172 60 285 112 385 175 26 17 54
 29 63 28 8 -2 27 -28 42 -58z"/>
 </g>
-<text x="800" y="552" font-family="'Cabinet Grotesk','Geist',system-ui,-apple-system,sans-serif" font-weight="700" font-size="430" letter-spacing="-18" fill="#FAF4EA">cor<tspan fill="#FAF4EAB3">tex</tspan></text>
-<g transform="translate(2090,180)">
-  <rect x="0" y="0" width="240" height="150" rx="75" fill="none" stroke="#FAF4EA" stroke-width="10"/>
-  <text x="120" y="103" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,monospace" font-weight="600" font-size="86" letter-spacing="6" fill="#FAF4EA">AI</text>
+<text x="795" y="550" font-family="'Cabinet Grotesk','Geist',system-ui,-apple-system,sans-serif" font-weight="800" font-size="430" letter-spacing="-16" fill="#FAF4EA">cortex</text>
+<g transform="translate(2035,165)">
+  <rect x="6" y="6" width="252" height="146" rx="73" fill="none" stroke="#FAF4EA" stroke-width="13"/>
+  <text x="132" y="112" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',ui-monospace,Menlo,monospace" font-weight="700" font-size="96" letter-spacing="14" fill="#FAF4EA">AI</text>
 </g>
 </svg>
