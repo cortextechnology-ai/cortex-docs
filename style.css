@@ -1,36 +1,95 @@
-/* Cortex docs — navbar styled after the cor-tex.solutions glass pill nav */
+/* Cortex docs — navbar cloned from the cor-tex.solutions glass nav.
+   Top of page: full-width espresso band (like the landing nav at rest).
+   On scroll: morphs into the floating glossy glass pill, animated with the
+   site's easing. Scroll state comes from Mintlify's #navbar-transition
+   data-is-opaque attribute via :has(). */
 
-/* ---- floating dark glass pill ---- */
-
-#navbar {
-  background: transparent;
-  border-bottom: none;
-  box-shadow: none;
-  padding: 14px 16px 0;
-}
-
-/* default translucent backdrop layer — replaced by the pill below */
+/* default translucent backdrop layer — we draw our own backgrounds */
 #navbar-transition {
   display: none;
 }
 
+/* ---- state 1: full-width dark band at the top ---- */
+
+#navbar {
+  background: linear-gradient(180deg, rgba(28, 22, 16, 0.97), rgba(21, 17, 13, 0.94));
+  border-bottom: none;
+  box-shadow: none;
+  padding: 0;
+  transition: background 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    padding 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
 #navbar > div.max-w-8xl {
-  background: rgba(21, 17, 13, 0.9);
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0 10px;
+  transition: background 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    border-radius 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* glossy sheen + warm glow layers (visible in both states, stronger on the pill) */
+#navbar > div.max-w-8xl::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(
+      115deg,
+      transparent 18%,
+      rgba(255, 255, 255, 0.05) 34%,
+      rgba(255, 255, 255, 0.11) 43%,
+      rgba(255, 255, 255, 0.04) 52%,
+      transparent 68%
+    ),
+    radial-gradient(120% 180% at 50% -60%, rgba(255, 140, 60, 0.13), transparent 60%);
+  opacity: 0.65;
+  transition: opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+#navbar > div.max-w-8xl::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    inset 0 -18px 24px -24px rgba(0, 0, 0, 0.8);
+}
+
+/* ---- state 2: scrolled → floating glossy pill ---- */
+
+#navbar:has(> #navbar-transition[data-is-opaque="true"]) {
+  background: transparent;
+  padding: 12px 18px 0;
+}
+
+#navbar:has(> #navbar-transition[data-is-opaque="true"]) > div.max-w-8xl {
+  background: rgba(21, 17, 13, 0.62);
   backdrop-filter: blur(26px) saturate(1.7);
   -webkit-backdrop-filter: blur(26px) saturate(1.7);
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 22px 50px -18px rgba(0, 0, 0, 0.55),
-    inset 0 1px 0 rgba(255, 255, 255, 0.12);
-  padding: 0 10px;
+  border-color: rgba(255, 255, 255, 0.13);
+  box-shadow: 0 22px 50px -18px rgba(0, 0, 0, 0.55);
 }
 
-/* the bar draws its own hairlines — drop them inside the pill */
+#navbar:has(> #navbar-transition[data-is-opaque="true"]) > div.max-w-8xl::before {
+  opacity: 1;
+}
+
+/* the bar draws its own hairlines — drop them */
 #navbar [class*="border-b"] {
   border-bottom: none;
 }
 
-/* single-tab strip ("Documentation") is redundant inside the pill — hide its row */
+/* single-tab strip ("Documentation") is redundant — hide its row */
 #navbar > div.max-w-8xl > div > div:nth-child(2) {
   display: none;
 }
@@ -76,6 +135,10 @@
 
 /* ---- Dashboard CTA → white pill like the site's "Get your demo" ---- */
 
+#topbar-cta-button a {
+  z-index: 1;
+}
+
 #topbar-cta-button a > span.absolute {
   background: #ffffff !important;
   border-radius: 999px !important;
@@ -97,7 +160,7 @@
   color: rgba(27, 21, 16, 0.85) !important;
 }
 
-/* ---- theme toggle: subtle on the dark pill ---- */
+/* ---- theme toggle: subtle on the dark bar ---- */
 
 #navbar button[data-component-name="theme-toggle"] {
   background: transparent;
