@@ -1,0 +1,108 @@
+/* Cortex docs — navbar styled after the cor-tex.solutions glass pill nav */
+
+/* ---- floating dark glass pill ---- */
+
+#navbar {
+  background: transparent;
+  border-bottom: none;
+  box-shadow: none;
+  padding: 14px 16px 0;
+}
+
+/* default translucent backdrop layer — replaced by the pill below */
+#navbar-transition {
+  display: none;
+}
+
+#navbar > div.max-w-8xl {
+  background: rgba(21, 17, 13, 0.9);
+  backdrop-filter: blur(26px) saturate(1.7);
+  -webkit-backdrop-filter: blur(26px) saturate(1.7);
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 22px 50px -18px rgba(0, 0, 0, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  padding: 0 10px;
+}
+
+/* the bar draws its own hairlines — drop them inside the pill */
+#navbar [class*="border-b"] {
+  border-bottom: none;
+}
+
+/* single-tab strip ("Documentation") is redundant inside the pill — hide its row */
+#navbar > div.max-w-8xl > div > div:nth-child(2) {
+  display: none;
+}
+
+/* ---- cream text + icons ---- */
+
+#navbar,
+#navbar button,
+#navbar a {
+  color: #faf4ea;
+}
+
+#navbar svg {
+  color: rgba(250, 244, 234, 0.8);
+}
+
+#navbar navbar-link,
+#navbar .navbar-link {
+  color: rgba(250, 244, 234, 0.85);
+}
+
+#navbar navbar-link:hover,
+#navbar .navbar-link:hover {
+  color: #faf4ea;
+}
+
+/* ---- search + assistant → dark glass fields ---- */
+
+#navbar #search-bar-entry,
+#navbar button[id^="search-bar"],
+#navbar button[aria-label="Open Assistant"] {
+  background: rgba(255, 255, 255, 0.07) !important;
+  border-radius: 999px;
+  box-shadow: none;
+  --tw-ring-color: rgba(255, 255, 255, 0.16) !important;
+  color: rgba(250, 244, 234, 0.65);
+}
+
+#navbar #search-bar-entry *,
+#navbar button[aria-label="Open Assistant"] * {
+  color: rgba(250, 244, 234, 0.65) !important;
+}
+
+/* ---- Dashboard CTA → white pill like the site's "Get your demo" ---- */
+
+#topbar-cta-button a > span.absolute {
+  background: #ffffff !important;
+  border-radius: 999px !important;
+  opacity: 1 !important;
+}
+
+#topbar-cta-button a:hover > span.absolute {
+  background: #faf4ea !important;
+  opacity: 1 !important;
+}
+
+#topbar-cta-button a span.z-10,
+#topbar-cta-button a div span {
+  color: #1b1510 !important;
+  font-weight: 600;
+}
+
+#topbar-cta-button a svg {
+  color: rgba(27, 21, 16, 0.85) !important;
+}
+
+/* ---- theme toggle: subtle on the dark pill ---- */
+
+#navbar button[data-component-name="theme-toggle"] {
+  background: transparent;
+}
+
+#navbar button[data-component-name="theme-toggle"] svg {
+  color: rgba(250, 244, 234, 0.7);
+}
