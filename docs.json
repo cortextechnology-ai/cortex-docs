@@ -91,7 +91,7 @@
         },
         {
           "anchor": "Support",
-          "href": "mailto:cortextechnologyai@gmail.com",
+          "href": "mailto:office@cor-tex.solutions",
           "icon": "headset"
         }
       ]
@@ -115,13 +115,12 @@
   },
   "footer": {
     "socials": {
-      "website": "https://cor-tex.solutions",
-      "linkedin": "https://www.linkedin.com/in/hamoodey/"
+      "website": "https://cor-tex.solutions"
     }
   },
   "seo": {
     "metatags": {
-      "canonical": "https://docs.cor-tex.solutions"
+      "canonical": "https://cortex.mintlify.app"
     }
   }
 }
