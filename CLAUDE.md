@@ -6,6 +6,8 @@ This repository is the public documentation site for Cortex, the voice AI that a
 
 Read `CONTEXT.md` next for how a change moves through this repo.
 
+Trunk: this repo is one of six clones inside the private `cortex-phone-agents` repo. Cross-repo rules, plans, decisions, and the system map live there. Read its `CLAUDE.md` for anything that spans repos.
+
 ## Where things live
 
 | Path | What it holds |
