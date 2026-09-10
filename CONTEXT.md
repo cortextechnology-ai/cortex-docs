@@ -16,7 +16,7 @@ Status: v1, 2026-09-08. Folder: the repository root. One job: publish the public
 
 ## Outputs
 - The live site at `https://cortex.mintlify.app`. Push-to-deploy from `main`.
-- `docs.json` names `https://docs.cor-tex.solutions` as the canonical URL. That domain was not wired as of 2026-09-08. `README.md` § Deploy has the custom-domain steps.
+- `docs.json` sets the canonical URL to `https://cortex.mintlify.app` (the live site). The custom domain `docs.cor-tex.solutions` is NOT wired (no DNS as of 2026-09-10); `README.md` § Deploy has the (still-pending) custom-domain steps.
 
 ## Human check
 A person reads every PR before merge, because merge publishes. The check: the page is in `docs.json`, `mint validate` passed, and nothing internal is on the page.

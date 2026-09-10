@@ -37,7 +37,7 @@ api-reference/         # (optional) OpenAPI tab — add openapi.json + a tab in 
    - TLS provisions automatically.
 
 Free (Starter) tier covers custom domain + AI assistant. See
-`../docs/research/2026-06-09-mintlify-docs-build-recipe.md` for the full recipe.
+the Mintlify build recipe in the private trunk repo (`cortex-phone-agents`, under `docs/research/`) for the full recipe.
 
 ## Adding the API Reference tab (later)
 
