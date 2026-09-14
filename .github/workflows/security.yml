@@ -1,0 +1,69 @@
+name: security
+
+# Secret scanning for cortex-docs. Added 2026-09-14 (phase 7, security/cortex-docs.md:10).
+#
+# This repo is PUBLIC. A credential pasted into an MDX example would be world-readable
+# the moment it is pushed, and before this job nothing flagged it: `validate.yml` checks
+# the Mintlify build and the redaction terms, not secret shapes.
+#
+# Why the gitleaks BINARY and not gitleaks/gitleaks-action@v2:
+# the v2 action gates on a paid GITLEAKS_LICENSE secret for ORG-owned repos
+# ("[org] is an organization. License key is required.") and exits before it ever reads
+# a config file. This repo lives under the cortextechnology-ai org, so the action cannot
+# go green without buying a license — being public does not exempt an org repo. The
+# binary is Apache-2.0, has no such gate, and is the same path cortex-backend's
+# security.yml uses. If a GITLEAKS_LICENSE secret is ever bought for the org, the action
+# becomes an option; until then the binary is the only one that can pass.
+#
+# This workflow uses no secret. It needs no GITHUB_TOKEN beyond the read-only default
+# that actions/checkout uses, and permissions are narrowed to `contents: read` below.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  gitleaks:
+    name: gitleaks (secret scan)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Full history so the scan covers past commits, not just the tip. A secret
+          # removed in a later commit stays public in a public repo's history.
+          fetch-depth: 0
+
+      # The control runs before the verdict: a planted canary in a temp directory must
+      # be caught, so a broken or mis-invoked scanner fails the job instead of passing
+      # it silently with "no leaks found". Same shape as the redaction job in validate.yml.
+      - name: gitleaks (secret scan)
+        env:
+          GITLEAKS_VERSION: 8.30.1
+        run: |
+          set -euo pipefail
+          curl -sSL "https://github.com/gitleaks/gitleaks/releases/download/v${GITLEAKS_VERSION}/gitleaks_${GITLEAKS_VERSION}_linux_x64.tar.gz" \
+            | tar -xz gitleaks
+          ./gitleaks version
+
+          # Positive control, in a temp dir so this repo is never written to.
+          d=$(mktemp -d)
+          git init -q "$d"
+          printf 'const apiKey = "%s";\n' "$(head -c 30 /dev/urandom | base64 | tr -d '=+/\n')" > "$d/planted.js"
+          git -C "$d" add -A
+          git -C "$d" -c user.email=ci@local -c user.name=ci commit -qm control
+          if ./gitleaks git "$d" --no-banner --redact --exit-code 1 >/dev/null 2>&1; then
+            echo 'control missed the planted secret: the scan is not proving anything'
+            exit 1
+          fi
+          echo 'control caught the planted secret'
+
+          # The real scan. Full history, secret values redacted in the log, non-zero on a hit.
+          # No .gitleaks.toml is committed here: the scan is clean with the default ruleset
+          # (0 findings over the full history, 2026-09-14), so there is nothing to allowlist.
+          # Add one only with a per-finding justification, as Cortex-Dashboard does.
+          ./gitleaks git . --no-banner --redact --exit-code 1
