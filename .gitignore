@@ -7,5 +7,5 @@
 # Installed by `npm i -g mint`; nothing in this repo needs a local install.
 node_modules/
 
-# CLI logs from a failed `mint dev` or `mint validate` run
-*.log # mint writes a log here when a preview or a validation fails
+# mint writes a log here when a preview or a validation fails
+*.log
