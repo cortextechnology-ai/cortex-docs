@@ -9,8 +9,8 @@
     "dark": "#C21818"
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg",
+    "light": "/logo/cortex-mark.svg",
+    "dark": "/logo/cortex-mark.svg",
     "href": "https://cor-tex.solutions"
   },
   "favicon": "/favicon.svg",

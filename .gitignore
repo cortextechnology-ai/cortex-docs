@@ -1,4 +1,11 @@
+# Project rules only. Machine-specific tool folders (.DS_Store and the like) live in
+# the global ignore (git config --global core.excludesfile), per live-reconcile rule R5.
+
+# The Mintlify CLI's local preview cache. Rebuilt by `mint dev`.
 .mintlify/
+
+# Installed by `npm i -g mint`; nothing in this repo needs a local install.
 node_modules/
-.DS_Store
-*.log
+
+# CLI logs from a failed `mint dev` or `mint validate` run
+*.log # mint writes a log here when a preview or a validation fails

@@ -1,0 +1,24 @@
+name: validate
+
+# Validates the Mintlify build on every pull request and on every push to main.
+# `mint validate` runs in strict mode: it exits non-zero on a warning or an error,
+# so a page missing from docs.json navigation, a broken MDX file, or a bad config
+# key fails here instead of on the published site. The command needs no Mintlify
+# account and reads only in-repo files, so there is no secret in this workflow.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+      - run: npm i -g mint
+      - run: mint validate
