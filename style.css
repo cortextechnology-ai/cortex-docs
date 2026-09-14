@@ -1,4 +1,13 @@
-/* Cortex docs — navbar cloned from the cor-tex.solutions glass nav.
+/* Cortex docs — custom stylesheet.
+
+   HOW THIS FILE LOADS. Mintlify loads a stylesheet named `style.css` at the site
+   root by convention. No key in `docs.json` names it, and the `docs.json` schema
+   has no key for a stylesheet at all (checked 2026-09-14). So do not look for a
+   config line: the file name and the location ARE the wiring. Rename it or move
+   it and every rule below stops applying, silently.
+   Checked 2026-09-14: `mint dev` serves it at `/style.css` with HTTP 200.
+
+   Cortex docs — navbar cloned from the cor-tex.solutions glass nav.
    Top of page: full-width espresso band (like the landing nav at rest).
    On scroll: morphs into the floating glossy glass pill, animated with the
    site's easing. Scroll state comes from Mintlify's #navbar-transition

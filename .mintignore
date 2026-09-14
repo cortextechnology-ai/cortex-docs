@@ -1,3 +1,7 @@
-# Agent entry files. Never publish.
+# Files the site must never publish.
+# Agent entry files.
 CLAUDE.md
 CONTEXT.md
+AGENTS.md
+# Developer setup. Not written for an operator.
+README.md
